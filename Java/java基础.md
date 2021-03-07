@@ -7,19 +7,22 @@
 > 对于基本类型和引用类型 == 的作用效果是不同的，
 
 如下所示： 
-	基本类型：比较的是值是否相同； 
-	引用类型：比较的是引用是否相同；
+> 基本类型：比较的是值是否相同； 
+引用类型：比较的是引用是否相同；
+
 代码示例：
-	(```)
-	String x =“string”;
-	String y =“string”;
-	String z = new String(“string”);
-	System.out.println(x==y); // true
-	System.out.println(x==z); // false
-	System.out.println(x.equals(y)); // true
-	System.out.println(x.equals(z)); // true
-	(```)
-	代码解读：因为 x和  y指向的是同一个引用，所以  ==也是  true，而 new String()方法则重写开辟了
+(```)
+String x =“string”;
+String y =“string”;
+String z = new String(“string”);
+System.out.println(x==y); // true
+System.out.println(x==z); // false
+System.out.println(x.equals(y)); // true
+System.out.println(x.equals(z)); // true
+(```)
+
+代码解读:
+    因为 x和  y指向的是同一个引用，所以  ==也是  true，而 new String()方法则重写开辟了
 	内存空间，所以 ==结果为  false，而 equals比较的一直是值，所以结果都为  true。
 	equals解读
 	equals本质上就是  ==，只不过 String和  Integer等重写了  equals方法，把它变成了值比较。看下面的代码就明白了。
