@@ -1,0 +1,33 @@
+1.Java容器都有哪些？
+Java容器分为Collection和Map两大类,其下又有很多子类，如下所示：
+Collection
+	List
+	(List是一个继承于Collection的接口,即List是集合的一种。List是有序的队列，List中每个元素都有一个索引,第一个元素的索引为0,往后的所有元素索引值依次+1。和Set不同,List中允许有元素重复。)
+		ArrayList
+		(ArrayList是一个动态数组，也是我们最常用的集合。它允许任何符合规则的元素插入甚至包括NULL。每个ArrayList都有一个初始容量：
+		private static final int DEFAULT_CAPACITY = 10;
+		随着容器中的元素不断增加，容器的大小也会随着增加。在每次向容器中增加元素的同时都会进行容量检查，当快溢出时，就会进行扩容操作。所以如果我们明确所插入的元素多少，最好指定一个初始容量值，避免过多的扩容操作而浪费时间，效率。
+		size、isEmpty、get、set、iterator和listIterator操作都是以固定时间运行。add操作以分摊的固定时间运行，也就是说，添加n个元素所需的时间O(n)时间（由于考虑到扩容，所以这不只是添加元素会带来分摊固定时间开销那样简单）。
+	    ArrayList擅长于随机访问。同时ArrayList是非同步的)
+		LinkedList
+		Vector
+		Stack
+	Set
+		HashSet
+		LinkedHashSet
+		TreeSet
+Map
+	HashMap
+	LinkedHashMap
+	TreeMap
+	ConcurrentHashMap
+	Hashtable
+
+2.Collection和Collections有什么区别
+Collection是一个集合接口，它提供了对集合对象进行基本操作的通用接口方法，所有集合都是它的子类，比如List，Set等。
+Collections是一个包装类，包含了很多静态方法，不能被实例化，就像一个工具类，比如提供的排序方法：Collections.sort(list)。
+
+3.List、Set、Map之间的区别是什么？
+List、Set、Map的区别主要体现在两个方面：元素是否有序、是否允许元素重复。
+
+
