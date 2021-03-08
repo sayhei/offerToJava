@@ -70,6 +70,7 @@ public boolean equals(Object anObject){
 }
 ```
 原来是String重写了Object 的equals方法，把引用比较改成了值比较。
+
 总结：==对于基本类型来说是值比较，对于引用类型来说是比较的是引用：而equals默认情况下是引用比较，只是很多类重写了equals方法，比如String,Integer等把它变成了值比较，所以一般情况下equals比较的是值是否相等.
 
 ## 3.两个对象的hashCode()相同,则equals() 也不一定为true，对吗？
