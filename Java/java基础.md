@@ -45,7 +45,8 @@ Cat c2=new Cat("王磊");
 System.out.println(s1.equales(s2));
 ```
 同样的，当我们进入String的equals方法，找到了答案，代码如下：
-```cassandraql
+
+```
 public boolean equals(Object anObject){
     if(this == anObject){
         return true;
